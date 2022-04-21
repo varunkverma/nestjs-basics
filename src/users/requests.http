@@ -1,0 +1,41 @@
+### Create a new user or Sign up
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email":"user1@gmail.com",
+    "password":"password"
+}
+
+### sign in
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email":"user1@gmail.com",
+    "password":"password"
+}
+
+### sign out
+POST http://localhost:3000/auth/signOut
+Content-Type: application/json
+
+### find a user by id
+GET http://localhost:3000/auth/1
+
+### find all users using email
+GET http://localhost:3000/auth?email=test123@gmail.com
+
+### Remove user by id
+DELETE http://localhost:3000/auth/3
+
+### Update user by id
+PATCH http://localhost:3000/auth/1
+Content-Type: application/json
+
+{
+    "email":"user1@gmail.com"
+}
+
+### get user using cookie session
+GET http://localhost:3000/auth/whoami
